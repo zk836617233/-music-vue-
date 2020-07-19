@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body{
+  width: calc(100% - 330px);
+  margin: 0 auto;
+  background: antiquewhite;
+}
+
+@font_color:#828385;
+@duColor:#DCDDE4;
+@duLine:#23262C;
+
+@font-face {
+font-family: 'webfont';
+font-display: swap;
+src: url('//at.alicdn.com/t/webfont_zry1x2oa91a.eot');
+src: url('//at.alicdn.com/t/webfont_zry1x2oa91a.eot?#iefix') format('embedded-opentype'),
+url('//at.alicdn.com/t/webfont_zry1x2oa91a.woff2') format('woff2'),
+url('//at.alicdn.com/t/webfont_zry1x2oa91a.woff') format('woff'),
+url('//at.alicdn.com/t/webfont_zry1x2oa91a.ttf') format('truetype'),
+url('//at.alicdn.com/t/webfont_zry1x2oa91a.svg#思源黑体-细') format('svg');
+}
+
+::-webkit-scrollbar
+{
+  width: 10px;
+  height: 10px;
+  background-color: #2C2E32;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #16181C;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #2C2E32;
+}
+
+.recommendSong {
+  width: 100%;
+
+  .title_box {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid @duLine;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .title {
+      color: @duColor;
+      font-size: 18px;
+    }
+
+    .more {
+      color: #828385;
+      font-size: 12px;
+    }
+  }
+}
