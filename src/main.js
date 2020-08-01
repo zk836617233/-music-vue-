@@ -10,20 +10,27 @@ import VueAxios from "vue-axios";
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/swiper-bundle.css'
 import '../src/views/Comp/index'
+<<<<<<< HEAD
 import VueLazyload from "vue-lazyload";
 
 import code from './views/publicJS/code'
 Vue.use(VueLazyload)
+=======
+
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)
 Vue.use(VueAwesomeSwiper)
 axios.defaults.baseURL = "http://localhost:3000/"
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
 //配置全局过滤器 数量大于1万的在后面加上万
 Vue.filter('wan',function (val) {
     if (val > 10000){

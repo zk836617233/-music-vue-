@@ -21,10 +21,17 @@
                 List:[
                     {title:'个性推荐',router:'/style'},
                     {title:'歌单',router:'/songList'},
+<<<<<<< HEAD
                     {title:'主播电台',router:'/station'},
                     {title:'排行榜',router:'/Rank'},
                     {title:'歌手',router:'/singer'},
                     {title:'最新音乐',router:'/newMusic'},
+=======
+                    {title:'主播电台',router:'2'},
+                    {title:'排行榜',router:'/Rank'},
+                    {title:'歌手',router:'/singer'},
+                    {title:'最新音乐',router:'5'},
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
                 ]
             }
         },
@@ -58,7 +65,10 @@
                 line-height: 45px;
                 text-align: center;
                 cursor: pointer;
+<<<<<<< HEAD
                 font-weight: 300;
+=======
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
 
                 &:hover{
                     color: @color;

@@ -1,11 +1,20 @@
 <template>
     <div>
+<<<<<<< HEAD
         <div style="height: 200px;">
             <el-carousel trigger="click" :interval="3000" type="card" style="width: 760px" height="200">
                 <el-carousel-item v-for="(item, index) in BannerList" style="width: 540px;height: 200px" :key="index">
                     <img :src="item.imageUrl" style="width: 100%">
                 </el-carousel-item>
             </el-carousel>
+=======
+        <div style="height: 250px; border: 1px solid">
+<!--            <el-carousel trigger="click" :interval="4000" type="card" style="width: 760px" height="200">-->
+<!--                <el-carousel-item v-for="(item, index) in BannerList" style="width: 540px;height: 200px" :key="index">-->
+<!--                    <img :src="item.imageUrl" style="width: 100%">-->
+<!--                </el-carousel-item>-->
+<!--            </el-carousel>-->
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
         </div>
 <!--        推荐歌单-->
         <div class="recommendSong">
@@ -18,6 +27,7 @@
                     <div class="song">
                         <div class="song_mun"><i class="el-icon-headset"></i>{{item.playCount | wan}}</div>
                         <img :src="item.picUrl" alt="">
+<<<<<<< HEAD
                         <!--            悬浮下拉-->
                         <div class="hint">
                             {{item.copywriter}}
@@ -29,6 +39,13 @@
                 </div>
             </div>
 
+=======
+                    </div>
+                    <span class="song_cont">{{item.name}}</span>
+                    <i class="el-icon-video-play Play"></i>
+                </div>
+            </div>
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
         </div>
 
 <!--        独家放送-->
@@ -109,7 +126,10 @@
             //获取推荐歌单
             GetSongList(){
                 this.axios.get("personalized").then( ({data}) => {
+<<<<<<< HEAD
                     console.log(data)
+=======
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
                     this.SongList = data.result.slice(0,10)
                 })
             },
@@ -124,23 +144,39 @@
             GetPersonalizedMv(){
                 this.axios.get('/personalized/mv').then( ({data}) => {
                     this.PersonalizedMvList = data.result.slice(0,3)
+<<<<<<< HEAD
+=======
+                    console.log(this.PersonalizedMvList)
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
                     this.PersonalizedMvList.forEach((item ,index) => {
 
                         if (item.name.length > 20){
                            const s = item.name.substring(0,20) + "..."
+<<<<<<< HEAD
 
+=======
+                            console.log(this.PersonalizedMvList[index].name)
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
                             this.PersonalizedMvList[index].name = s
                         }
 
                     })
+<<<<<<< HEAD
 
+=======
+                    console.log(this.PersonalizedMvList[0].name.length)
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
                 })
             },
 
             //获取推荐新音乐
             GetNewMusic(){
                 this.axios.get("/personalized/newsong").then(({data}) => {
+<<<<<<< HEAD
 
+=======
+                    console.log(data)
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
                     this.NewMusic = data.result
                 })
             }
@@ -184,7 +220,10 @@
     .recommendSong{
         width: 100%;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
         .title_box{
             height: 40px;
             display: flex;
@@ -192,7 +231,10 @@
             border-bottom: 1px solid @duLine;
             align-items: center;
             margin-bottom: 10px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
             .title{
                 color: @duColor;
                 font-size: 18px;
@@ -201,7 +243,10 @@
                 color: #828385;
                 font-size: 12px;
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
         }
 
         .song_box{
@@ -213,6 +258,7 @@
             .song_x{
                 position: relative;
                 margin-bottom: 75px;
+<<<<<<< HEAD
 
                 &:hover{
                     cursor: pointer;
@@ -220,6 +266,10 @@
                         transform: translateY(100%);
                     }
 
+=======
+                &:hover{
+                    cursor: pointer;
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
                     .Play{
                         font-size: 20px;
                         color: #F0EFEF;
@@ -234,13 +284,19 @@
                     }
 
                 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
             }
             .song{
                 width: 138px;
                 height: 138px;
                 position: relative;
+<<<<<<< HEAD
                 overflow: hidden;
+=======
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
                 img{
                     width: 138px;
                     height: 138px;
@@ -261,6 +317,7 @@
                         margin-right: 5px;
                     }
                 }
+<<<<<<< HEAD
 
                 // 悬浮下拉
                 .hint{
@@ -275,6 +332,8 @@
                     bottom: 100%;
                     left: 0;
                 }
+=======
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
             }
 
             .song_cont{
@@ -285,9 +344,12 @@
                 position: absolute;
                 margin-top: 6px;
             }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
         }
     }
     .Play{
