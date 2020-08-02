@@ -9,14 +9,11 @@ const Song = () => import('../components/FindMusic/SongList/Song')
 // const Rank = () => import('../components/FindMusic/RankList/Rank')
 import Rank from "../components/FindMusic/RankList/Rank";
 const singer = () => import('../components/FindMusic/Singer/Singer')
-<<<<<<< HEAD
+
 const station = () => import('../components/FindMusic/DJstation/Station')
 const newMusic = () => import('../components/FindMusic/NewMusic/newmusic')
 const search = () => import('../components/Search/search')
-=======
 
-
->>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
 Vue.use(VueRouter)
 
   const routes = [
@@ -24,7 +21,6 @@ Vue.use(VueRouter)
     children:[
       {path:'/',name:'FindMusic',component:FindMusic, redirect:'/style',
         children:[
-<<<<<<< HEAD
           { path:'/style',component:MyStyle },
           {path:'/SongList',component:Song},
           {path:'/Rank',name:'rank',component:Rank},
@@ -33,14 +29,6 @@ Vue.use(VueRouter)
           {path:'/newMusic',name:'newMusic',component:newMusic}
         ]},
       {path: 'search',name: 'search',component:search}
-=======
-          {path:'/style',component:MyStyle},
-          {path:'/SongList',component:Song},
-          {path:'/Rank',name:'rank',component:Rank},
-          {path:'/singer',name:'singer',component:singer}
-        ]},
->>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
-
     ]},
 
   // {

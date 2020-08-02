@@ -38,11 +38,7 @@
         display: flex;
         flex-wrap: wrap;
         .music_box{
-<<<<<<< HEAD
             width: 375px;
-=======
-            width: 380px;
->>>>>>> be63f5af771de04cad0231e13d40826e564cb8fa
             height: 60px;
             border: 1px solid #222428;
             display: flex;
