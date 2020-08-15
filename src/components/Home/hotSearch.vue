@@ -1,5 +1,5 @@
 <template>
-    <div class="search_box">
+    <div class="search_box" v-clickoutside="handleClose">
          <div class="hotlist_title">热搜榜</div>
         <div>
             <div class="hot_box" v-for="(item, index) in HotSearch"  @click="inputSearch(item.searchWord)">
@@ -14,17 +14,43 @@
 </template>
 
 <script>
+    const clickoutside = {
+        bind(el, binding, vnode){
+            function documentHandler(e) {
+                if (el.contains(e.target)){
+                    return false
+                }
+                if (binding.expressions) {
+                    binding.value(e)
+                }
+            }
+            el.__vueClickOutside__ = documentHandler;
+            document.addEventListener('click', documentHandler);
+        },
+        unbind(el, binding){
+            document.removeEventListener('click', el.__vueClickOutside__);
+            delete el.__vueClickOutside__;
+        }
+    }
     export default {
         name: "hotSearch",
         data(){
             return{
-                HotSearch:[]
+                HotSearch:[],
+                show:true
             }
+        },
+        directives:{
+            clickoutside
         },
         created() {
             this.GetHotList()
         },
         methods:{
+            handleClose(e) {
+                console.log(e)
+                this.show = false;
+            },
             GetHotList(){
                 this.axios.get("/search/hot/detail").then( ({data}) => {
                     if (data.code !== 200) return this.$message.error("获取热搜失败！")
@@ -35,18 +61,20 @@
             inputSearch(name){
                 this.$emit('searchName',name)
             },
+
         }
     }
 </script>
 
 <style lang="less" scoped>
+
     .red{
         color: #FB3939!important;
     }
 .search_box{
     width: 425px;
     max-height: 500px;
-    z-index: 99;
+    z-index: 999;
     background: #2D2F33;
     top: 38px;
     left: 0;

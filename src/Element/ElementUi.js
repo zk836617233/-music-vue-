@@ -1,6 +1,7 @@
 import Vue from 'vue'
 
-import { Button,Aside,Container,Header,Main,Carousel,CarouselItem,Message,Loading,Image } from "element-ui";
+import { Button,Aside,Container,Header,Main,Carousel,CarouselItem,Message,Loading,Image,
+Dialog} from "element-ui";
 
 
 Vue.use(Aside)
@@ -12,5 +13,6 @@ Vue.use(Carousel)
 Vue.use(CarouselItem)
 Vue.use(Loading)
 Vue.use(Image)
+Vue.use(Dialog)
 
 Vue.prototype.$message = Message

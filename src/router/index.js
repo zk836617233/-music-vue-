@@ -13,7 +13,7 @@ const singer = () => import('../components/FindMusic/Singer/Singer')
 const station = () => import('../components/FindMusic/DJstation/Station')
 const newMusic = () => import('../components/FindMusic/NewMusic/newmusic')
 const search = () => import('../components/Search/search')
-
+const Songs = () => import('../components/FindMusic/Songs/Songs')
 Vue.use(VueRouter)
 
   const routes = [
@@ -28,7 +28,9 @@ Vue.use(VueRouter)
           {path:'/station',name:'singer',component:station},
           {path:'/newMusic',name:'newMusic',component:newMusic}
         ]},
-      {path: 'search',name: 'search',component:search}
+      {path: 'search',name: 'search',component:search},
+      {path: 'Songs',name: 'Songs',component:Songs},
+
     ]},
 
   // {

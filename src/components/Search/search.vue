@@ -2,7 +2,7 @@
     <div>
         <div>
             <div class="header">
-                搜索 <span>“情深深”</span>，找到{{SongInfo.songCount}}首单曲
+                搜索 <span>“{{demo}}”</span>，找到{{SongInfo.songCount}}首单曲
             </div>
             <div class="Song_tab">
                 <ul>

@@ -15,7 +15,7 @@
                 <div class="more">更多></div>
             </div>
             <div class="song_box" >
-                <div v-for="item in SongList" class="song_x">
+                <div v-for="item in SongList" class="song_x" @click="SongListRecommend(item.id)">
                     <div class="song">
                         <div class="song_mun"><i class="el-icon-headset"></i>{{item.playCount | wan}}</div>
                         <img :src="item.picUrl" alt="">
@@ -146,6 +146,11 @@
                 this.axios.get("/personalized/newsong").then(({data}) => {
                     this.NewMusic = data.result
                 })
+            },
+
+            // 点击推荐歌单
+            SongListRecommend(id){
+               this.$router.push({path:'/songs',query:{id:id}})
             }
         }
     }
